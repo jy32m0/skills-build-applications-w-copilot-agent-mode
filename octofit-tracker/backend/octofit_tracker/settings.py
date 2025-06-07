@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-ijt*1&7)k&(8a7)j)*td%vw2n60!%xmt*%6k=h#vyuk7e*%bw@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['crispy-fishstick-77r9x9rw5vfwppx-8000.app.github.dev', 'localhost', '127.0.0.1']
 
 
 # Application definition
