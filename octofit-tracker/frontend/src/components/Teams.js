@@ -9,7 +9,8 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+//    fetch(API_URL)
+    fetch('https://octofit-tracker-backend.onrender.com/api/teams/') // Use this for production
       .then(res => res.json())
       .then(data => setTeams(data))
       .catch(err => console.error(err));

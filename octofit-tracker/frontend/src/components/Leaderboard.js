@@ -9,7 +9,8 @@ function Leaderboard() {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+//    fetch(API_URL)
+    fetch('https://octofit-tracker-backend.onrender.com/api/leaderboard/') // Use this for production
       .then(res => res.json())
       .then(data => setEntries(data))
       .catch(err => console.error(err));

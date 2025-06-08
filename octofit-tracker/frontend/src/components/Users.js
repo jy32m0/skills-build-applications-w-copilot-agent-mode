@@ -9,7 +9,8 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+//    fetch(API_URL)
+    fetch('https://octofit-tracker-backend.onrender.com/api/users/') // Use this for production
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => console.error(err));
