@@ -2,9 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Copilot agent mode: Use Codespace Django REST API endpoint suffix for Leaderboard
-const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/leaderboard/` // endpoint suffix: /api/leaderboard/
-  : 'http://localhost:8000/api/leaderboard/';
+const API_URL = 'https://crispy-fishstick-77r9x9rw5vfwppx-8000.app.github.dev/api/leaderboard/';
 
 function Leaderboard() {
   const [entries, setEntries] = useState([]);

@@ -2,9 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Copilot agent mode: Use Codespace Django REST API endpoint suffix for Users
-const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/users/` // endpoint suffix: /api/users/
-  : 'http://localhost:8000/api/users/';
+const API_URL = 'https://crispy-fishstick-77r9x9rw5vfwppx-8000.app.github.dev/api/users/';
 
 function Users() {
   const [users, setUsers] = useState([]);

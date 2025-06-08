@@ -2,9 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Copilot agent mode: Use Codespace Django REST API endpoint suffix for Teams
-const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/teams/` // endpoint suffix: /api/teams/
-  : 'http://localhost:8000/api/teams/';
+const API_URL = 'https://crispy-fishstick-77r9x9rw5vfwppx-8000.app.github.dev/api/teams/';
 
 function Teams() {
   const [teams, setTeams] = useState([]);
