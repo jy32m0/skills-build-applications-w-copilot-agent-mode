@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+// Use Codespace Django REST API endpoint suffix for Users
 const API_URL = window.location.hostname.includes('app.github.dev')
   ? `https://${window.location.hostname}/api/users/`
   : 'http://localhost:8000/api/users/';

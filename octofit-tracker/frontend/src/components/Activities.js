@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+// Use Codespace Django REST API endpoint suffix for Activities
 const API_URL = window.location.hostname.includes('app.github.dev')
   ? `https://${window.location.hostname}/api/activity/`
   : 'http://localhost:8000/api/activity/';
