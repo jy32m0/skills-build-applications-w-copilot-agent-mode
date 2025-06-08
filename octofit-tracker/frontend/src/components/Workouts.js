@@ -1,15 +1,18 @@
 
 import React, { useEffect, useState } from 'react';
+
 // Use Codespace Django REST API endpoint suffix for Workouts
-const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/workouts/`
-  : 'http://localhost:8000/api/workouts/';
+//const API_URL = window.location.hostname.includes('app.github.dev')
+//  ? `https://${window.location.hostname}/api/workouts/`
+//  : 'http://localhost:8000/api/workouts/';
 
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch(API_URL)
+//    fetch(API_URL)
+    fetch('http://localhost:8000/api/workouts/') // Adjust this URL as needed
+      // fetch('https://octofit-tracker-backend.onrender.com/api/workouts/') // Use this for production
       .then(res => res.json())
       .then(data => setWorkouts(data))
       .catch(err => console.error(err));
@@ -18,7 +21,7 @@ function Workouts() {
   return (
     <div className="card shadow mb-4">
       <div className="card-body">
-        <h2 className="card-title mb-4">Workouts</h2>
+        <h2 className="card-title mb-4">WorkoutsTest</h2>
         <div className="table-responsive">
           <table className="table table-striped table-hover">
             <thead className="table-primary">
