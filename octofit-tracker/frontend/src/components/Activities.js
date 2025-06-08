@@ -1,10 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
-// Use Codespace Django REST API endpoint suffix for Activities
-//const API_URL = window.location.hostname.includes('app.github.dev')
-const API_URL = 'https://crispy-fishstick-77r9x9rw5vfwppx-3000.app.github.dev/api/activity/'
-//  ? `https://${window.location.hostname}/api/activity/`
-//  : 'http://localhost:8000/api/activity/';
+
+// Copilot agent mode: Use Codespace Django REST API endpoint suffix for Activities
+const API_URL = window.location.hostname.includes('app.github.dev')
+  ? `https://${window.location.hostname}/api/activity/` // endpoint suffix: /api/activity/
+  : 'http://localhost:8000/api/activity/';
   
 function Activities() {
   const [activities, setActivities] = useState([]);
@@ -19,7 +19,7 @@ function Activities() {
   return (
     <div className="card shadow mb-4">
       <div className="card-body">
-        <h2 className="card-title mb-4">ActivitiesT</h2>
+        <h2 className="card-title mb-4">Activities</h2>
         <div className="table-responsive">
           <table className="table table-striped table-hover">
             <thead className="table-primary">

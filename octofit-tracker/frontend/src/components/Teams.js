@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-// Use Codespace Django REST API endpoint suffix for Teams
+
+// Copilot agent mode: Use Codespace Django REST API endpoint suffix for Teams
 const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/teams/`
+  ? `https://${window.location.hostname}/api/teams/` // endpoint suffix: /api/teams/
   : 'http://localhost:8000/api/teams/';
 
 function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-//    fetch(API_URL)
-    fetch('https://octofit-tracker-backend.onrender.com/api/teams/') // Use this for production
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => setTeams(data))
       .catch(err => console.error(err));

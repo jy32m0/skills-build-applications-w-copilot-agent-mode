@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-// Use Codespace Django REST API endpoint suffix for Users
+
+// Copilot agent mode: Use Codespace Django REST API endpoint suffix for Users
 const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/users/`
+  ? `https://${window.location.hostname}/api/users/` // endpoint suffix: /api/users/
   : 'http://localhost:8000/api/users/';
 
 function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-//    fetch(API_URL)
-    fetch('https://octofit-tracker-backend.onrender.com/api/users/') // Use this for production
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(err => console.error(err));

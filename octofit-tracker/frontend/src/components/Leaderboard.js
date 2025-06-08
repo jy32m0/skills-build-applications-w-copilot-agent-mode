@@ -1,16 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-// Use Codespace Django REST API endpoint suffix for Leaderboard
+
+// Copilot agent mode: Use Codespace Django REST API endpoint suffix for Leaderboard
 const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/leaderboard/`
+  ? `https://${window.location.hostname}/api/leaderboard/` // endpoint suffix: /api/leaderboard/
   : 'http://localhost:8000/api/leaderboard/';
 
 function Leaderboard() {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-//    fetch(API_URL)
-    fetch('https://octofit-tracker-backend.onrender.com/api/leaderboard/') // Use this for production
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => setEntries(data))
       .catch(err => console.error(err));

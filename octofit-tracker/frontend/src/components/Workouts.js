@@ -1,17 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
 
-// Use Codespace Django REST API endpoint suffix for Workouts
+// Copilot agent mode: Use Codespace Django REST API endpoint suffix for Workouts
 const API_URL = window.location.hostname.includes('app.github.dev')
-  ? `https://${window.location.hostname}/api/workouts/`
+  ? `https://${window.location.hostname}/api/workouts/` // endpoint suffix: /api/workouts/
   : 'http://localhost:8000/api/workouts/';
 
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-//    fetch(API_URL)
-    fetch('https://octofit-tracker-backend.onrender.com/api/workouts/') // Use this for production
+    fetch(API_URL)
       .then(res => res.json())
       .then(data => setWorkouts(data))
       .catch(err => console.error(err));
